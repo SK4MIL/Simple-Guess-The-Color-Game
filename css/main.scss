@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    body {
+        color: white;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        font-family: Arial;
+        margin: auto;
+        padding: auto;
+        background-color: rgb(20, 20, 20);
+        // background-color: rgb(159, 188, 214);
+
+        .content {
+            .header {
+                background-color: black;
+                width: 100vw;
+                min-height: 2vh;
+                padding: 0.6vh;
+                margin: auto;
+
+                .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 0.5vw;
+                    margin-right: 0.5vw;
+                    color: white;
+                }
+            }
+
+            .gameScreen {
+                flex-direction: column;
+                width: 70vw;
+                height: 80vh;
+                margin: auto;
+
+                .colorMixingWindow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                    font-size: xx-large;
+                    height: 15vh;
+                    width: 70vw;
+                    margin: auto;
+
+                    .finalColor {
+                        width: 13vh;
+                        height: 13vh;
+                        background-size: 13vh 13vh;
+                        background-color: rgb(255, 255, 255);
+                        background-image: url("../images/Question_mark.png");
+                        margin: auto;
+                    }
+                }
+
+                .colorPicker {
+                    display: flex;
+                    min-width: 16vw;
+                    min-height: 20vh;
+                    justify-content: center;
+                    align-items: center;
+                    padding: auto;
+                    margin: auto;
+
+                    #pickedColor {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-grow: 1;
+                        min-width: 13vh;
+                        min-height: 25vh;
+                        margin: auto;
+
+                        .picker {
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            padding: auto;
+                            margin: auto;
+                            .slider {
+                                justify-content: center;
+                                align-items: center;
+                                margin: auto;
+                            }
+    
+                            .submitButton {
+                                margin: auto;
+                                // margin-top: 0.4em;
+                                padding: 10px;
+                                // width: 16vw;
+                                border: none;
+                                outline: none;
+                                font-size: 1.4em;
+                                font-weight: 500;
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal {
+            text-align: center;
+            padding: 2em;
+            min-width: 32vh;
+            // max-width: 50vw;
+            min-height: 26vh;
+            // max-height: 70vh;
+            border-radius: 40px;
+            border: none;
+            margin: auto;
+
+            #resultsMessage{
+                margin-bottom: 0.8em;
+                
+            }
+
+            .modalContent{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .colorComparison{
+                    display: flex;
+                    flex-direction: row;
+                    .comparedColor{
+                        padding: 1em;
+                    }
+                    #finalDelta{
+                        margin: auto;
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                }
+    
+                #playAgain{
+                    margin: 0.8em;
+                    margin-bottom: 0;
+                    min-width: 30vw;
+                    height: 6vh;
+                    font-size: 22px;
+                    font-weight: 500;
+                    border-radius: 30px;
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(20, 20, 20);
+                }
+
+            }
+        }
+    }
+}
+
+.colorBox {
+    width: 13vh;
+    height: 13vh;
+    border-radius: 18px;
+    margin: auto;
+}
+
+.red{
+    color: red;
+    font-weight: bold;
+}
+.green{
+    color: green;
+    font-weight: bold;
+}
+.blue{
+    color: blue;
+    font-weight: bold;
+}
