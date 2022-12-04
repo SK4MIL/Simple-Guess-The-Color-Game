@@ -13,13 +13,12 @@
         margin: auto;
         padding: auto;
         background-color: rgb(20, 20, 20);
-        // background-color: rgb(159, 188, 214);
 
         .content {
             .header {
                 background-color: black;
                 width: 100vw;
-                min-height: 2vh;
+                min-height: 2em;
                 padding: 0.6vh;
                 margin: auto;
 
@@ -37,7 +36,6 @@
             .gameScreen {
                 flex-direction: column;
                 width: 70vw;
-                height: 80vh;
                 margin: auto;
 
                 .colorMixingWindow {
@@ -46,13 +44,10 @@
                     align-items: center;
                     font-weight: bold;
                     font-size: xx-large;
-                    height: 15vh;
                     width: 70vw;
                     margin: auto;
 
                     .finalColor {
-                        width: 13vh;
-                        height: 13vh;
                         background-size: 13vh 13vh;
                         background-color: rgb(255, 255, 255);
                         background-image: url("../images/Question_mark.png");
@@ -62,8 +57,8 @@
 
                 .colorPicker {
                     display: flex;
-                    min-width: 16vw;
-                    min-height: 20vh;
+                    max-width: 54vw;
+                    min-height: 10em;
                     justify-content: center;
                     align-items: center;
                     padding: auto;
@@ -73,9 +68,8 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        min-height: 10em;
                         flex-grow: 1;
-                        min-width: 13vh;
-                        min-height: 25vh;
                         margin: auto;
 
                         .picker {
@@ -84,22 +78,21 @@
                             flex-direction: column;
                             padding: auto;
                             margin: auto;
+
                             .slider {
                                 justify-content: center;
                                 align-items: center;
-                                margin: auto;
+                                margin: 0.2em;
                             }
     
                             .submitButton {
                                 margin: auto;
-                                // margin-top: 0.4em;
-                                padding: 10px;
-                                // width: 16vw;
-                                border: none;
                                 outline: none;
+                                border: none;
+                                border-radius: 30px;
+                                padding: 10px;
                                 font-size: 1.4em;
                                 font-weight: 500;
-                                border-radius: 30px;
                             }
                         }
                     }
@@ -110,10 +103,8 @@
         .modal {
             text-align: center;
             padding: 2em;
-            min-width: 32vh;
-            // max-width: 50vw;
-            min-height: 26vh;
-            // max-height: 70vh;
+            min-width: 10em;
+            min-height: 10em;
             border-radius: 40px;
             border: none;
             margin: auto;
@@ -141,10 +132,12 @@
                 }
     
                 #playAgain{
+                    padding: auto;
                     margin: 0.8em;
                     margin-bottom: 0;
-                    min-width: 30vw;
-                    height: 6vh;
+                    min-width: 8em;
+                    height: 6vh; 
+                    min-height: 2em;
                     font-size: 22px;
                     font-weight: 500;
                     border-radius: 30px;
@@ -160,6 +153,8 @@
 .colorBox {
     width: 13vh;
     height: 13vh;
+    min-height: 4em;
+    min-width: 4em;
     border-radius: 18px;
     margin: auto;
 }
