@@ -21,7 +21,6 @@ function startTheGame(){
     secondRandomColor.style.backgroundColor = generateRandomColor()
     obtainedColor = mixbox.lerp(firstRandomColor.style.backgroundColor, secondRandomColor.style.backgroundColor, 0.5)
     getPickedColor()
-    console.log(obtainedColor)
 }
 
 function getRandomInteger(MAX_VALUE) {
@@ -94,7 +93,6 @@ function decideGameResoult(deltaE) {
 
     if (numOfTries < MAX_TRIES)
     {
-        console.log(deltaE)
         if (deltaE <= 4.0) {
             win = true
             message = `Congratulations, you know your colors!`
@@ -133,14 +131,18 @@ function showPreviusTry(deltaE)
         display: flex;
         justify-content: center; 
         align-items: center;
-        height: 8vh;` 
+        height: 8vh;
+        min-height: 4.6em;`
     const colorBox = document.createElement("div")
     colorBox.style.cssText = `
     margin: auto;
+    padding: auto;
     width: 7vh;
     height: 7vh;
+    min-height: 4em;
+    min-width: 4em;
     background-color: ${window.pickedColor.style.backgroundColor};` 
-    colorBox.classList = "randomColor"
+    colorBox.classList = "colorBox"
     const colorDifference = document.createElement("h2")
     colorDifference.style.margin = "auto"
     colorDifference.innerHTML = `ΔE = ${deltaE.toFixed(1)}`

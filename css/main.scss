@@ -37,6 +37,7 @@
                 flex-direction: column;
                 width: 70vw;
                 margin: auto;
+                margin-top: 0.5em;
 
                 .colorMixingWindow {
                     display: flex;
@@ -46,6 +47,7 @@
                     font-size: xx-large;
                     width: 70vw;
                     margin: auto;
+                    margin-bottom: 0.5em;
 
                     .finalColor {
                         background-size: 13vh 13vh;
@@ -71,6 +73,8 @@
                         min-height: 10em;
                         flex-grow: 1;
                         margin: auto;
+                        margin-top: 0.5em;
+                        padding: auto;
 
                         .picker {
                             display: flex;
