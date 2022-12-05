@@ -32,7 +32,7 @@ function getRandomInteger(MAX_VALUE) {
 }
 
 function generateRandomColor(){
-    const MAX_VALUE = 256;
+    const MAX_VALUE = 255;
     let red = getRandomInteger(MAX_VALUE)
     let green = getRandomInteger(MAX_VALUE)
     let blue = getRandomInteger(MAX_VALUE)
@@ -68,7 +68,7 @@ function compareTwoColors(){
     const [L1, A1, B1] = Colour.rgba2lab(obtainedColor[0], obtainedColor[1], obtainedColor[2])
     const [L2, A2, B2] = Colour.rgba2lab(pickedColorObject['red'], pickedColorObject['green'], pickedColorObject['blue'])
     const deltaE = Colour.deltaE00(L1, A1, B1, L2, A2, B2);
-    decideGameResoult(deltaE)
+    decideGameResult(deltaE)
 }
 
 function sliceRgbColorString(rgbColor){
@@ -87,7 +87,7 @@ function sliceRgbColorString(rgbColor){
         return obj
     }
     
-function decideGameResoult(deltaE) {
+function decideGameResult(deltaE) {
     let win = false
     let message = ""
 
@@ -99,7 +99,7 @@ function decideGameResoult(deltaE) {
         } else if (deltaE <= 10.0) {
             message = "Oh too bad! You were so close!"
         } else {
-            message = "You lost"
+            message = "You lose."
         }
         showPreviusTry(deltaE)
         numOfTries++
