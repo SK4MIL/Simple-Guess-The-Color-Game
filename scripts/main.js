@@ -15,12 +15,14 @@ function startTheGame(){
     window.submitModal.close()
     document.querySelector(".submitButton").disabled = false
     window.mixedColor.style.background  = ""
+    
     let firstRandomColor = window.firstRandomColor
     let secondRandomColor = window.secondRandomColor
     firstRandomColor.style.backgroundColor = generateRandomColor()
     secondRandomColor.style.backgroundColor = generateRandomColor()
     obtainedColor = mixbox.lerp(firstRandomColor.style.backgroundColor, secondRandomColor.style.backgroundColor, 0.5)
     getPickedColor()
+    addEventListener("resize", setBackgroundSize)
 }
 
 function getRandomInteger(MAX_VALUE) {
@@ -158,4 +160,12 @@ function clearPreviousTries()
     attempts.forEach( attempt => {
         attempt.remove()
     })
+}
+
+function setBackgroundSize()
+{
+    let width = window.mixedColor.offsetWidth;
+    let height = window.mixedColor.offsetHeight;
+    
+    window.mixedColor.style.backgroundSize = width + "px " + height + "px";
 }

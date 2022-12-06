@@ -138,8 +138,8 @@
 .colorBox {
   width: 13vh;
   height: 13vh;
-  min-height: 4em;
-  min-width: 4em;
+  min-height: 3.3em;
+  min-width: 3.3em;
   border-radius: 18px;
   margin: auto;
 }
